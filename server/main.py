@@ -20,7 +20,7 @@ class NewsGenerator:
         return JSONResponse(self.bookss1)
 
     def generate_news(self, item_id: int, req: CommandClientRequest):
-        ColorPrinter.LOGMODULE(f"{sys._getframe().f_code.co_name} {req} done ") 
+        ColorPrinter.LOGMODULE(f"{req.payload} done ") 
         try:
             searchdict = {"searchkeywords": req.payload["search"], "pages": req.payload["pages"]}
             article_fetcher = ArticleFetcher(searchdict)

@@ -21,7 +21,7 @@ except ModuleNotFoundError as e:
     print("3. Ensure there is an '__init__.py' file inside the 'app' directory.")
     print("4. Confirm that module names match actual filenames.")
 class ArticleFetcher:
-    ColorPrinter.LOGMODULE("Start Search -----------------------------------------------") 
+    ColorPrinter.LOGMODULE("Start Search ------------") 
     ColorPrinter.LOGMODULE(f"{sys._getframe().f_code.co_name} ") 
     def __init__(self, search):
         filename = re.sub(' ', '_', search["searchkeywords"])
