@@ -1,0 +1,98 @@
+
+{
+    "max_open_trades": 3,
+    "stake_currency": "KRW",
+    "stake_amount": 1000000,
+    "tradable_balance_ratio": 0.3,
+    "fiat_display_currency": "KRW",
+    "dry_run": true,
+    "dry_run_wallet": 100000000,
+    "cancel_open_orders_on_exit": false,
+    "trading_mode": "spot",
+    "margin_mode": "",
+    "unfilledtimeout": {
+        "entry": 101,
+        "exit": 101,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing":{
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "exchange": {
+        "name": "upbit",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": [
+            "SAND/KRW",
+            "CBK/KRW",
+            "PLA/KRW",
+            "BORA/KRW",
+            "MOC/KRW",
+            "DKA/KRW",
+            "AQT/KRW",
+            "META/KRW",
+            "MLK/KRW",
+            "UPP/KRW",
+            "CRE/KRW",
+            "MBL/KRW",
+            "MVL/KRW",
+            "AERGO/KRW",
+            "ICX/KRW",
+            "SSX/KRW",
+            "AHT/KRW",
+            "MED/KRW"
+        ],
+        "pair_blacklist": [    
+        
+        ]
+    },
+    
+    "pairlists": [
+		{
+			"method": "StaticPairList",
+			"number_assets": 18,
+			"sort_key": "quoteVolume",
+			"min_value": 0,
+			"refresh_period": 360
+		}
+
+	],
+    "telegram": {
+        "enabled": true,
+        "token": "5393225564:AAFkh5eO5bW950sBovv3TdUWeT1LQWiaDi8",
+        "chat_id": "1614362199"
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "7d540822f7155d52b8945917e6e35966ddc0a6228c7d40864ddca323e0de5a60",
+        "ws_token": "nukAaOkiBaxkFzguO53ZQQZn_C4z4qHKrw",
+        "CORS_origins": [],
+        "username": "fq",
+        "password": "fq"
+    },
+    "bot_name": "freqtrade",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    }
+}

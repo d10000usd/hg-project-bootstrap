@@ -1,0 +1,186 @@
+{
+    "timeScale": {
+        "timeVisible": "true",
+        "secondsVisible": "false"
+    },
+    "priceScale": {
+        "autoScale": "true",
+        "scaleMargins": {
+            "top": 0.1,
+            "bottom": 0.2
+        }
+    },
+    "grid": {
+        "vertLines": false,
+        "horzLines": false
+    },
+    "priceFormatter": {
+        "style": "currency",
+        "currency": "KRW"
+    },
+    "movingAverages": {
+        "ma3": {
+            "color": "rgba(255, 0, 0, 1)",
+            "lineWidth": 2,
+            "priceLineVisible": "false"
+        },
+        "ma5": {
+            "color": "rgba(0, 0, 255, 1)",
+            "lineWidth": 2,
+            "priceLineVisible": "false"
+        },
+        "ma15": {
+            "color": "rgba(128, 128, 128, 1)",
+            "lineWidth": 6,
+            "priceLineVisible": "false"
+        },
+        "ma65": {
+            "color": "rgba(128, 128, 128, 1)",
+            "lineWidth": 2,
+            "priceLineVisible": "false"
+        },
+        "ma95": {
+            "color": "rgba(128, 128, 128, 1)",
+            "lineWidth": 2,
+            "priceLineVisible": "false"
+        },
+        "ma125": {
+            "color": "rgba(128, 128, 128, 1)",
+            "lineWidth": 2,
+            "priceLineVisible": "false"
+        },
+        "ma155": {
+            "color": "rgba(128, 128, 128, 1)",
+            "lineWidth": 2,
+            "priceLineVisible": "false"
+        },
+        "ma185": {
+            "color": "rgba(128, 128, 128, 1)",
+            "lineWidth": 2,
+            "priceLineVisible": "false"
+        },
+        "ma215": {
+            "color": "rgba(128, 128, 128, 1)",
+            "lineWidth": 2,
+            "priceLineVisible": "false"
+        },
+        "ma245": {
+            "color": "rgba(128, 128, 128, 1)",
+            "lineWidth": 2,
+            "priceLineVisible": "false"
+        }
+    },
+    "crosshair": {
+        "vertLine": {
+            "width": 2,
+            "color": "#C3BCDB44",
+            "labelBackgroundColor": "#9B7DFF"
+        },
+        "horzLine": {
+            "color": "#9B7DFF",
+            "labelBackgroundColor": "#9B7DFF"
+        }
+    },
+
+        
+    "lineOption": {
+        "font" : {    "layout": {
+            "fontFamily": "'Roboto', sans-serif"
+        }},
+        "mainSeries": {
+            "upColor": "rgba(0, 150, 136, 1)",
+            "downColor": "rgba(255,82,82, 1)",
+            "borderDownColor": "rgba(255,82,82, 1)",
+            "borderUpColor": "rgba(0, 150, 136, 1)",
+            "wickDownColor": "rgba(255,82,82, 1)",
+            "wickUpColor": "rgba(0, 150, 136, 1)",
+            "borderVisible": true,
+            "wickVisible": true,
+            "borderColor": "#378658",
+            "lineWidth": 2
+        },
+        "minPriceLine": {
+            "price": "this.guidline.minimum.value ",
+            "color": "#ef5350",
+            "lineWidth": 4,
+            "lineStyle": 2,
+            "axisLabelVisible": true,
+            "title": "최저가",
+            "textAlign": "left"
+        },
+        "avgPriceLine": {
+            "price": "this.guidline.average.value",
+            "color": "black",
+            "lineWidth": 6,
+            "lineStyle": 0,
+            "axisLabelVisible": true,
+            "title": "저항선"
+        },
+        "maxPriceLine": {
+            "price": "this.guidline.maximum.value",
+            "color": "#26a69a",
+            "lineWidth": 4,
+            "lineStyle": 2,
+            "axisLabelVisible": false,
+            "title": "최고가",
+            "textAlign": "left"
+        },
+        "lineColor": {
+            "priceScaleColor": {
+                "borderColor": "#71649C"
+            },
+            "timeScaleColor": {
+                "borderColor": "#71649C",
+                "barSpacing": 110
+            }
+        },
+        "priceScale": {
+            "autoScale": true,
+            "scaleMargins": {
+                "top": 0.1,
+                "bottom": 0.2
+            },
+            "mode": " LightweightCharts.PriceScaleMode.Normal"
+        },
+        "priceFormatter": {
+            "style": "currency",
+            "currency": "KRW"
+        },
+        "trendline": {
+            "regist": [
+                {
+                    "color": "red",
+                    "lineWidth": 4,
+                    "priceLineVisible": false
+                },
+                {
+                    "color": "blue",
+                    "lineWidth": 4,
+                    "priceLineVisible": false
+                },
+                {
+                    "color": "black",
+                    "lineWidth": 4,
+                    "priceLineVisible": false
+                }
+            ],
+            "surport": [
+                {
+                    "color": "red",
+                    "lineWidth": 4,
+                    "priceLineVisible": false
+                },
+                {
+                    "color": "blue",
+                    "lineWidth": 4,
+                    "priceLineVisible": false
+                },
+                {
+                    "color": "black",
+                    "lineWidth": 4,
+                    "priceLineVisible": false
+                }
+            ]
+        }
+    }
+}
