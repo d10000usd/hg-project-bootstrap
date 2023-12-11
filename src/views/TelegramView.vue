@@ -1,7 +1,7 @@
 <template>
-
-<searchnews_basic/>
     <Blog/>
+<!-- <searchnews_basic/> -->
+
 
 </template>
 <script setup>

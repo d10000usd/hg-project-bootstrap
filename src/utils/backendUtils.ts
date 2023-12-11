@@ -1,5 +1,5 @@
 export const backendSchema = {
-  baseUrl: 'http://172.30.1.10:1338/',
+  baseUrl: 'http://112.165.191.22:1338/',
   pingEndpoint: 'ping',
   booksEndpoint: 'books',
   news: 'news/1',

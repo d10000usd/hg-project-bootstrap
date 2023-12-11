@@ -4,8 +4,9 @@
         <div class="spacing-search  container">
             <div>
                 <div>
-                    <input v-model="searchQuery" placeholder="search query 3 words" class="naver-input"
-                        @keyup.enter="resetAndUpdateSearch">
+                    <!-- @keyup.enter="resetAndUpdateSearch" -->
+                    <input v-model="searchQuery" placeholder="search query 3 words" class="naver-input" 
+>
                     <button @click="resetAndUpdateSearch" class="naver-button">S</button>
                 </div>
             </div>
@@ -47,8 +48,8 @@ const { responseData1, parsingdata1, updateItem } = RequestData();
 const searchQuery = ref('');
 const pdemandedUpdate = ref({
     id: 1,
-    name: 'chartcoin',
-    payload: { "search": "네이버 스트리밍 트위치", "pages": 3 },
+    name: 'WebSearchView',
+    payload: { "search": "search text", "pages": 3 },
 });
 const isSearching = ref(false);
 const elapsedTime = ref(0);

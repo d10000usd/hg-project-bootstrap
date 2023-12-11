@@ -5,7 +5,7 @@ from collections import Counter
 import asyncio
 import aiohttp
 import pandas as pd
-from fastapi.responses import JSONResponse
+
 
 from newspaper import Article
 try:
@@ -21,6 +21,7 @@ except ModuleNotFoundError as e:
     print("3. Ensure there is an '__init__.py' file inside the 'app' directory.")
     print("4. Confirm that module names match actual filenames.")
 class ArticleFetcher:
+    ColorPrinter.LOGMODULE("Start Search -----------------------------------------------") 
     ColorPrinter.LOGMODULE(f"{sys._getframe().f_code.co_name} ") 
     def __init__(self, search):
         filename = re.sub(' ', '_', search["searchkeywords"])
@@ -38,7 +39,8 @@ class ArticleFetcher:
 
         self.removal_list = ['으','으며','있습니다','있습니','있으며','있','있다','중','다시', '꽉', '서', '면에서', '에서', '이어', '한', '총', '까지', '이후', '것이란', '까지', '하다고', '및', '등', '의', '있다고', '다시', '폐', '읽음', '지나', '쑥', '대비', '대한', '왜',
                      '최근','을', '있기', '은', '는', '이', '가', '을', '를', '으로', '로', '와', '과',  '부터', '까지', '에', '에서', '에게', '한테', '에게서', '한테서', '만', '이랑', '랑', '수', '있다', '이렇게', '것', '다']
-        
+  
+
     def count_occurrences(self,sentence):
         # Get ticker keys
         ticker_dict = stockticker()
@@ -117,7 +119,7 @@ class ArticleFetcher:
 
     def fetch_all(self):
         with ThreadPoolExecutor() as executor:
-            ColorPrinter.LOGMODULE(f"{sys._getframe().f_code.co_name} ") 
+            
             results = list(executor.map(self.fetch_info, self.links))
 
         return results
@@ -148,7 +150,8 @@ class ArticleFetcher:
             senddict={"newscontents":sorted_news_contents,"company":stocker_count}
             # results.append(stocker_count)
             self.save_results(senddict)
-            ColorPrinter.LOGMODULE(f"{sys._getframe().f_code.co_name} {self.searchkey} ") 
+            
+            
             return senddict
         except OSError:
             # Return an error response if OSError occurs
@@ -166,9 +169,9 @@ class ArticleFetcher:
             print('Error: Creating directory/file. ')
 
 class NewsLinkDownload():
-    
+    ColorPrinter.LOGMODULE(f"{sys._getframe().f_code.co_name} ")
     def __init__(self, search) -> None:
-
+        
         self.search = search["searchkeywords"]
         self.pages = search["pages"]
         self.savepath = "/Users/hg/DEV/WebDocuments/public/blog"
@@ -206,6 +209,7 @@ class NewsLinkDownload():
 
     def link_generate_main(self, naverdict):
         result = asyncio.run(self.linkmain(naverdict))
+        
         link_lists = []
         for i, _ in enumerate(result):
             for idx, _ in enumerate(result[i]):
@@ -222,8 +226,12 @@ class NewsLinkDownload():
         search_info = {"검색어": self.search, "검색페이지수": self.pages, "파일이름": filename, "searchtype": "news"}
         search_keyword = {"검색어": search_info["검색어"]}
         results = self.link_generate_main(search_keyword)
-        # ColorPrinter.LOGMODULE(f"{sys._getframe().f_code.co_name}  ") 
-        ColorPrinter.LOGMODULE(f"{results}") 
-        # print(results)
+    
+
 
         return results
+    
+# if __name__ == "__main__":
+#     searchdict = {"searchkeywords": "삼성전자", "pages": 1}
+#     article_fetcher = ArticleFetcher(searchdict)
+#     news_json = article_fetcher.main()

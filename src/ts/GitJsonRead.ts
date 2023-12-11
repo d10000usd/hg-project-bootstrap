@@ -23,6 +23,7 @@ export async function GitJsonRead() {
     // 예를 들어, jsonData를 TypeScript 객체로 파싱한 후 사용할 수 있습니다.
     // 예: const parsedData = JSON.parse(jsonData);
     // console.log('JSON 데이터 가져오기 성공:', jsonData);
+    
     return jsonData;
   } catch (error: any) {
     console.error('오류 발생:', error.message);

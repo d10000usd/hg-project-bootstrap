@@ -1,12 +1,12 @@
 [
     "KRW-EGLD",
-    "KRW-SUI",
     "KRW-BTC",
     "KRW-ETH",
-    "KRW-SOL",
     "KRW-MOC",
+    "KRW-SUI",
+    "KRW-ARB",
     "KRW-LOOM",
     "KRW-MATIC",
-    "KRW-ARB",
+    "KRW-SOL",
     "KRW-HIFI"
 ]
