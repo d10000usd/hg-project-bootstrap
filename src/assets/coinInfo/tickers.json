@@ -1,16 +1,12 @@
 [
-    "KRW-ARB",
-    "KRW-SOL",
-    "KRW-HIFI",
-    "KRW-MOC",
-    "KRW-WAXP",
-    "KRW-MATIC",
-    "KRW-SUI",
-    "KRW-AVAX",
-    "KRW-ETH",
     "KRW-EGLD",
-    "KRW-LOOM",
-    "KRW-WAVES",
+    "KRW-SUI",
     "KRW-BTC",
-    "KRW-STEEM"
+    "KRW-ETH",
+    "KRW-SOL",
+    "KRW-MOC",
+    "KRW-LOOM",
+    "KRW-MATIC",
+    "KRW-ARB",
+    "KRW-HIFI"
 ]
